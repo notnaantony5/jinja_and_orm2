@@ -26,4 +26,5 @@ def index(request):
     ]
     return render(request,
                   'index.html',
-                  {'title': 'Главная'})
+                  {'title': 'Главная',
+                   'posts': posts})

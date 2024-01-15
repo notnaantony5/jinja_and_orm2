@@ -2,26 +2,50 @@
 {% block css %}
     <style>
         main {
-            margin: auto;
+            justify-content: center;
             display: flex;
             flex-direction: column;
         } 
         .post {
+            box-shadow: 5px 5px 5px black;
+            background-color: antiquewhite;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
             width: 60vw;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .post h3 {
-            font-size: large;
+            padding: 10px;
+            margin: 10px;
+            font-size: xx-large;
         }
         .post .name {
-            font-size: 12px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
         }
         .post .date {
-            font-size: 10px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
         }
     </style>
 {% endblock %}
 {% block content %}
     <main>
-        <div class="post"></div>
+    {% for post in posts %}
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <p class="name">{{ post.author }}</p>
+            <p class="date">{{ post.date }}</p>
+            <p class="text">{{ post.text }}</p>
+        </div>
+    {% endfor %}
     </main>
 {% endblock %}
