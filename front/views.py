@@ -2,6 +2,7 @@ import datetime
 
 from django.shortcuts import render
 
+
 def index(request):
     posts = [
         {
@@ -23,5 +24,6 @@ def index(request):
                     'случайный текст2 случайный текст '
         }
     ]
-
-
+    return render(request,
+                  'index.html',
+                  {'title': 'Главная'})

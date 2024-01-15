@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Название</title>
+    <title>{{ title }}</title>
     <style>
         body {
             padding: 0;
@@ -23,6 +23,8 @@
             font-size: large;
             padding: 10px 30px;
         }
+        {% block css %}
+        {% endblock %}
     </style>
 </head>
 <body>
@@ -31,5 +33,7 @@
         <p>Посты</p>
         <p>Контакты</p>
     </header>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

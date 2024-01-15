@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block css %}
+    <style>
+        main {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        } 
+        .post {
+            width: 60vw;
+        }
+        .post h3 {
+            font-size: large;
+        }
+        .post .name {
+            font-size: 12px;
+        }
+        .post .date {
+            font-size: 10px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <main>
+        <div class="post"></div>
+    </main>
+{% endblock %}
